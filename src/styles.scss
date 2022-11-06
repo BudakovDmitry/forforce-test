@@ -1,0 +1,108 @@
+@import "bootstrap/scss/bootstrap";
+
+.button {
+  max-width: 211px;
+  height: 60px;
+  font-weight: bold;
+  color: #ffffff
+}
+
+.link {
+  cursor: pointer;
+}
+
+.header {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__logo {
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 768px) {
+      margin-bottom: 50px;
+    }
+  }
+  &__button {
+    background-color: rgba(255, 113, 67, 1);
+    &:hover {
+      background-color: rgb(246, 80, 24);
+      color: #ffffff
+    }
+  }
+}
+
+.nav {
+  justify-content: center;
+  align-items: center;
+  &__list {
+    width: 70%;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  &__item {
+    list-style: none;
+  }
+  &__link {
+    text-decoration: none;
+    color: #696871;
+    padding-bottom: 10px;
+    font-weight: bold;
+    &:hover {
+      color: #19191B;
+      border-bottom: 1px solid #5454D4;
+    }
+  }
+}
+
+.active {
+  color: #19191B;
+  border-bottom: 1px solid #5454D4;
+}
+
+.main {
+  padding: 30px;
+  margin: 100px 0;
+  @media screen and (max-width: 992px) {
+    margin: 50px 0;
+  }
+  &__title {
+    font-size: 80px;
+    margin-bottom: 30px;
+    @media screen and (max-width: 576px) {
+      font-size: 60px;
+    }
+    @media screen and (max-width: 375px) {
+      font-size: 40px;
+    }
+  }
+  &__description {
+    font-size: 20px;
+    margin-bottom: 50px;
+    @media screen and (max-width: 576px) {
+      font-size: 16px;
+    }
+  }
+  &__button {
+    min-width: 211px;
+    background-color: #5454D4;
+    margin-right: 30px;
+    &:hover {
+      background-color: #3d3dc2;
+      color: #ffffff
+    }
+  }
+  &__buttons__container {
+    display: flex;
+  }
+  &__link {
+    display: block;
+    width: 60px;
+    height: 60px;
+  }
+}

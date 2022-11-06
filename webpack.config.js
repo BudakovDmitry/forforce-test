@@ -1,37 +1,31 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     mode: "development",
-    entry: "./src/js/main.js",
+    entry: path.resolve(__dirname, "src", "index.js"),
     output: {
-        filename: "main.js",
         path: path.resolve(__dirname, "dist"),
+        clean: true,
+        filename: "[name].js",
+        assetModuleFilename: "assets/[name][ext]",
     },
-    plugins: [new HtmlWebpackPlugin({ template: "./index.html" })],
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "src", "index.html"),
+        }),
+        new MiniCssExtractPlugin(),
+    ],
     module: {
         rules: [
             {
-                test: /\.(scss)$/,
-                use: [
-                    {
-                        loader: "style-loader",
-                    },
-                    {
-                        loader: "css-loader",
-                    },
-                    {
-                        loader: "postcss-loader",
-                        options: {
-                            postcssOptions: {
-                                plugins: () => [require("autoprefixer")],
-                            },
-                        },
-                    },
-                    {
-                        loader: "sass-loader",
-                    },
-                ],
+                test: /\.html$/,
+                loader: "html-loader",
+            },
+            {
+                test: /\.scss$/,
+                use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
             },
             {
                 test: /\.m?js$/,
@@ -45,16 +39,34 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: "asset/resource",
-                generator: {
-                    filename: "images/[name][ext][query]",
+                use: {
+                    loader: "image-webpack-loader",
+                    options: {
+                        mozjpeg: {
+                            progressive: true,
+                        },
+                        optipng: {
+                            enabled: true,
+                        },
+                        pngquant: {
+                            quality: [0.65, 0.9],
+                            speed: 4,
+                        },
+                        gifsicle: {
+                            interlaced: false,
+                        },
+                        webp: {
+                            quality: 75,
+                        },
+                    },
                 },
+                type: "asset/resource",
             },
         ],
     },
     devServer: {
-        static: path.resolve(__dirname, "dist"),
         port: 8080,
+        open: true,
         hot: true,
     },
 };
