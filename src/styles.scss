@@ -57,12 +57,17 @@ $grey-color: #696871;;
     display: flex;
     align-items: center;
     @media screen and (max-width: 768px) {
-      padding: 20px 5px;
+      padding: 20px 20px;
       margin-bottom: 50px;
+      margin-left: 40px;
     }
   }
   &__button {
     background-color: $orange-color;
+    @media screen and (max-width: 768px) {
+      margin-top: 15px;
+      margin-left: 15px;
+    }
     &:hover {
       background-color: $dark-orange-color;
       color: $white-color;
