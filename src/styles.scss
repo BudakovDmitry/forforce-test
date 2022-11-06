@@ -1,10 +1,21 @@
 @import "bootstrap/scss/bootstrap";
 
+// Variables
+
+$orange-color: #FF7143;
+$dark-orange-color: rgb(246, 80, 24);
+$white-color: #ffffff;
+$main-violet-color: #5454D4;
+$dark-violet-color: #3d3dc2;
+$black-color: #000000;
+
+
+
 .button {
   max-width: 211px;
   height: 60px;
   font-weight: bold;
-  color: #ffffff;
+  color: $white-color;
   border-radius: 10px;
 }
 
@@ -23,14 +34,15 @@
     display: flex;
     align-items: center;
     @media screen and (max-width: 768px) {
+      padding: 20px 5px;
       margin-bottom: 50px;
     }
   }
   &__button {
-    background-color: rgba(255, 113, 67, 1);
+    background-color: $orange-color;
     &:hover {
-      background-color: rgb(246, 80, 24);
-      color: #ffffff
+      background-color: $dark-orange-color;
+      color: $white-color;
     }
   }
 }
@@ -39,13 +51,16 @@
   justify-content: center;
   align-items: center;
   &__list {
-    width: 70%;
+    width: 100%;
     margin: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
     @media screen and (max-width: 768px) {
       width: 100%;
+    }
+    @media screen and (max-width: 375px) {
+      gap: 20px;
     }
   }
   &__item {
@@ -58,14 +73,14 @@
     font-weight: bold;
     &:hover {
       color: #19191B;
-      border-bottom: 1px solid #5454D4;
+      border-bottom: 1px solid $main-violet-color;
     }
   }
 }
 
-.active {
+.nav .active {
   color: #19191B;
-  border-bottom: 1px solid #5454D4;
+  border-bottom: 1px solid $main-violet-color;
 }
 
 // Main
@@ -75,6 +90,9 @@
   margin: 100px 0;
   @media screen and (max-width: 992px) {
     margin: 50px 0;
+  }
+  @media screen and (max-width: 375px) {
+    margin: 0;
   }
   &__title {
     font-size: 80px;
@@ -95,12 +113,15 @@
     }
   }
   &__button {
-    min-width: 211px;
-    background-color: #5454D4;
+    width: 211px;
+    background-color: $main-violet-color;
     margin-right: 30px;
+    @media screen and (max-width: 375px) {
+      width: 150px;
+    }
     &:hover {
-      background-color: #3d3dc2;
-      color: #ffffff
+      background-color: $dark-violet-color;
+      color: $white-color;
     }
   }
   &__buttons__container {
@@ -120,11 +141,35 @@
   &__list {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
   &__item {
     list-style: none;
   }
+}
+
+.carousel {
+  margin-top: 50px;
+  @media screen and (min-width: 769px) {
+    display: none;
+  }
+  &__image {
+    height: 80px;
+    margin: 0 auto;
+    @media screen and (max-width: 375px) {
+      height: 40px;
+    }
+  }
+  &__button {
+    color: $black-color;
+  }
+}
+
+.carousel-control-color {
+  color: $black-color;
 }
 
 // Form
@@ -146,7 +191,7 @@
     padding: 35px 45px;
     width: 420px;
     min-height: 440px;
-    background-color: #5454D4;
+    background-color: $main-violet-color;
     border-radius: 16px;
     @media screen and (max-width: 992px) {
       margin: 0 auto;
@@ -154,7 +199,7 @@
   }
   &__title {
     text-align: center;
-    color: #ffffff;
+    color: $white-color;
     font-weight: bold;
     margin-bottom: 35px;
   }
@@ -177,14 +222,20 @@
   }
   &__button {
     display: block;
-    background-color: rgba(255, 113, 67, 1);
+    background-color: $orange-color;
     min-width: 211px;
     text-transform: uppercase;
     font-size: 18px;
     margin: 0 auto;
     &:hover {
-      background-color: rgb(246, 80, 24);
-      color: #ffffff
+      background-color: $dark-orange-color;
+      color: $white-color;
     }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    overflow-x: hidden;
   }
 }
