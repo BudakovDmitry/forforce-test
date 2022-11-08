@@ -4,7 +4,7 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
-    @media screen and (max-width: 768px) {
+    @include media-breakpoint-down(md) {
       display: none;
     }
   }
@@ -15,14 +15,14 @@
 
 .carousel {
   margin-top: 50px;
-  @media screen and (min-width: 769px) {
+  @include media-breakpoint-up(md) { 
     display: none;
   }
   &__image {
     height: 80px;
     margin: 0 auto;
-    @media screen and (max-width: 375px) {
-      height: 40px;
+    @include media-breakpoint-down(sm) {
+      height: 50px;
     }
   }
   &__button {

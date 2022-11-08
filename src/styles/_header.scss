@@ -7,7 +7,7 @@
   &__logo {
     display: flex;
     align-items: center;
-    @media screen and (max-width: 768px) {
+    @include media-breakpoint-down(md) {
       display: block;
       text-align: center;
       padding: 20px 0;
@@ -17,7 +17,7 @@
   }
   &__button {
     background-color: $orange-color;
-    @media screen and (max-width: 768px) {
+    @include media-breakpoint-down(md) {
       margin: 0 auto;
       margin-bottom: 30px;
     }
@@ -37,10 +37,10 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    @media screen and (max-width: 768px) {
+    @include media-breakpoint-down(md) {
       width: 100%;
     }
-    @media screen and (max-width: 375px) {
+    @include media-breakpoint-down(sm) {
       gap: 20px;
     }
   }

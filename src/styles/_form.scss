@@ -1,7 +1,7 @@
 .form-section {
   margin-bottom: 100px;
   &__images__container {
-    @media screen and (max-width: 992px) {
+    @include media-breakpoint-down(lg) { 
       margin-bottom: 100px;
       display: flex;
       justify-content: space-around;
@@ -17,7 +17,7 @@
     min-height: 440px;
     background-color: $main-violet-color;
     border-radius: 16px;
-    @media screen and (max-width: 992px) {
+    @include media-breakpoint-down(lg) { 
       margin: 0 auto;
     }
   }

@@ -1,21 +1,18 @@
 .main {
   padding: 30px;
   margin: 100px 0;
-  @media screen and (max-width: 992px) {
+  @include media-breakpoint-down(lg) {
     margin: 50px 0;
   }
-  @media screen and (max-width: 375px) {
+  @include media-breakpoint-down(sm) {
     margin: 0;
   }
   &__title {
     font-family: 'DM Sans', serif;
     font-size: 80px;
     margin-bottom: 30px;
-    @media screen and (max-width: 576px) {
-      font-size: 60px;
-    }
-    @media screen and (max-width: 375px) {
-      font-size: 40px;
+    @include media-breakpoint-down(sm) {
+      font-size: 50px;
     }
   }
   &__description {
@@ -24,7 +21,7 @@
     font-size: 20px;
     margin-bottom: 50px;
     width: 70%;
-    @media screen and (max-width: 576px) {
+    @include media-breakpoint-down(sm) {
       font-size: 16px;
     }
   }
@@ -32,7 +29,7 @@
     width: 211px;
     background-color: $main-violet-color;
     margin-right: 30px;
-    @media screen and (max-width: 375px) {
+    @include media-breakpoint-down(sm) {
       width: 150px;
     }
     &:hover {
