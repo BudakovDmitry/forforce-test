@@ -1,36 +1,6 @@
 @import "bootstrap/scss/bootstrap";
-
-@font-face {
-  font-family: 'DM Sans';
-  src: url('./fonts/DMSans-Bold.woff2') format('woff2'), url('./fonts/DMSans-Bold.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Lato Bold';
-  src: url('./fonts/Lato-Bold.woff2') format('woff2'), url('./fonts/Lato-Bold.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Lato Medium';
-  src: url('./fonts/Lato-Medium.woff2') format('woff2'), url('./fonts/Lato-Medium.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Mulish';
-  src: url('./fonts/Mulish-Regular.woff2') format('woff2'), url('./fonts/Mulish-Regular.woff') format('woff');
-}
-
-
-// Variables
-
-$orange-color: #FF7143;
-$dark-orange-color: rgb(246, 80, 24);
-$white-color: #ffffff;
-$main-violet-color: #5454D4;
-$dark-violet-color: #3d3dc2;
-$black-color: #000000;
-$grey-color: #696871;;
-
+@import 'styles/variables';
+@import 'styles/fonts';
 
 
 .button {
@@ -52,7 +22,7 @@ $grey-color: #696871;;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: 'DM Sans';
+  font-family: 'DM Sans', serif;
   &__logo {
     display: flex;
     align-items: center;
@@ -125,7 +95,7 @@ $grey-color: #696871;;
     margin: 0;
   }
   &__title {
-    font-family: 'DM Sans';
+    font-family: 'DM Sans', serif;
     font-size: 80px;
     margin-bottom: 30px;
     @media screen and (max-width: 576px) {
@@ -136,7 +106,7 @@ $grey-color: #696871;;
     }
   }
   &__description {
-    font-family: 'Mulish';
+    font-family: 'Mulish', serif;
     color: #696871;
     font-size: 20px;
     margin-bottom: 50px;
@@ -231,7 +201,8 @@ $grey-color: #696871;;
     }
   }
   &__title {
-    font-family: 'Lato Bold';
+    font-family: 'Lato', serif;
+    font-weight: bold;
     text-align: center;
     color: $white-color;
     font-weight: bold;
@@ -247,7 +218,8 @@ $grey-color: #696871;;
     margin-bottom: 16px;
     padding: 0 10px;
     font-size: 20px;
-    font-family: 'Lato Medium';
+    font-family: 'Lato', serif;
+    font-weight: medium;
     &::-webkit-calendar-picker-indicator {
       opacity: 0;
     }
@@ -256,7 +228,8 @@ $grey-color: #696871;;
     }
   }
   &__input__label {
-    font-family: 'Lato Medium';
+    font-family: 'Lato', serif;
+    font-weight: medium;
     color: $grey-color;
   }
   &__button {
