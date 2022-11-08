@@ -18,7 +18,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 375px) {
+@include media-breakpoint-down(sm) {
   body {
     overflow-x: hidden;
   }
