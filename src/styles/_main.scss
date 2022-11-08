@@ -1,0 +1,51 @@
+.main {
+  padding: 30px;
+  margin: 100px 0;
+  @media screen and (max-width: 992px) {
+    margin: 50px 0;
+  }
+  @media screen and (max-width: 375px) {
+    margin: 0;
+  }
+  &__title {
+    font-family: 'DM Sans', serif;
+    font-size: 80px;
+    margin-bottom: 30px;
+    @media screen and (max-width: 576px) {
+      font-size: 60px;
+    }
+    @media screen and (max-width: 375px) {
+      font-size: 40px;
+    }
+  }
+  &__description {
+    font-family: 'Mulish', serif;
+    color: #696871;
+    font-size: 20px;
+    margin-bottom: 50px;
+    width: 70%;
+    @media screen and (max-width: 576px) {
+      font-size: 16px;
+    }
+  }
+  &__button {
+    width: 211px;
+    background-color: $main-violet-color;
+    margin-right: 30px;
+    @media screen and (max-width: 375px) {
+      width: 150px;
+    }
+    &:hover {
+      background-color: $dark-violet-color;
+      color: $white-color;
+    }
+  }
+  &__buttons__container {
+    display: flex;
+  }
+  &__link {
+    display: block;
+    width: 60px;
+    height: 60px;
+  }
+}

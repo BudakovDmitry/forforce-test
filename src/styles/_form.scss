@@ -1,0 +1,68 @@
+.form-section {
+  margin-bottom: 100px;
+  &__images__container {
+    @media screen and (max-width: 992px) {
+      margin-bottom: 100px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+}
+
+.form {
+  &__container {
+    padding: 35px 45px;
+    width: 420px;
+    min-height: 440px;
+    background-color: $main-violet-color;
+    border-radius: 16px;
+    @media screen and (max-width: 992px) {
+      margin: 0 auto;
+    }
+  }
+  &__title {
+    font-family: 'Lato', serif;
+    font-weight: bold;
+    text-align: center;
+    color: $white-color;
+    font-weight: bold;
+    margin-bottom: 35px;
+  }
+  &__input {
+    display: block;
+    justify-content: center;
+    min-width: 100%;
+    margin: 0 auto;
+    min-height: 65px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    padding: 0 10px;
+    font-size: 20px;
+    font-family: 'Lato', serif;
+    font-weight: medium;
+    &::-webkit-calendar-picker-indicator {
+      opacity: 0;
+    }
+    &:last-child {
+      margin-bottom: 25px;
+    }
+  }
+  &__input__label {
+    font-family: 'Lato', serif;
+    font-weight: medium;
+    color: $grey-color;
+  }
+  &__button {
+    display: block;
+    background-color: $orange-color;
+    min-width: 211px;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 0 auto;
+    &:hover {
+      background-color: $dark-orange-color;
+      color: $white-color;
+    }
+  }
+}
