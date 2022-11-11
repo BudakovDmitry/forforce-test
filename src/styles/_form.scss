@@ -1,5 +1,5 @@
 .form-section {
-  margin-bottom: 100px;
+  margin-bottom: 150px;
   &__images__container {
     @include media-breakpoint-down(lg) { 
       margin-bottom: 100px;
@@ -13,7 +13,7 @@
 .form {
   &__container {
     padding: 35px 45px;
-    width: 420px;
+    max-width: 100%;
     min-height: 440px;
     background-color: $main-violet-color;
     border-radius: 16px;

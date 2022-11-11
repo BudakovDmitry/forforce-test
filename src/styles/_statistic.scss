@@ -1,0 +1,42 @@
+.statistic {
+    &__container {
+        margin-bottom: 150px;
+    }
+    &__content {
+       
+    }
+
+    &__title {
+        font-family: 'DM Sans', serif;
+        font-weight: bold;
+        font-size: 80px;
+        margin-bottom: 30px;
+        @include media-breakpoint-down(sm) {
+          font-size: 50px;
+        }
+    }
+
+    &__description {
+        font-family: 'Mulish', serif;
+        color: $grey-color;
+        font-size: 20px;
+        margin-bottom: 50px;
+        width: 70%;
+        @include media-breakpoint-down(sm) {
+          font-size: 16px;
+        }
+    }
+
+    &__link {
+        font-family: 'DM Sans', serif;
+        font-size: 17px;
+        line-height: 20px;
+        letter-spacing: -0.531474px;
+        color: #5454D4;
+        text-decoration: none;
+    }
+
+    &__image {
+        max-width: 100%;
+    }
+}

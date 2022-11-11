@@ -1,0 +1,28 @@
+.audits {
+    margin-bottom: 150px;
+}
+
+.audits-item {
+    &__icon {
+        max-width: 100%;
+        margin: 10px auto;
+    }
+    &__icon img {
+        max-width: 151px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-family: 'DM Sans', serif;
+        font-weight: bold;
+    }
+
+    &__description {
+        font-family: 'Mulish';
+        color: $grey-color;
+        line-height: 24px;
+        letter-spacing: -0.5002105832099915px;
+    }
+}
+
