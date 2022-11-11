@@ -6,7 +6,7 @@
   "author": "Budakov Dmitry <budakov.it@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack serve",
+    "start": "webpack serve --mode development",
     "build:dev": "webpack --mode development",
     "deploy": "gh-pages -d dist"
   },
