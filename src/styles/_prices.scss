@@ -133,6 +133,8 @@ input:checked + .switch__slider:after {
         margin: 0 auto;
         border: 1px solid #EAE9F2;
         cursor: pointer;
+        font-family: 'DM Sans', serif;
+        font-weight: bold;
     }
 }
 
