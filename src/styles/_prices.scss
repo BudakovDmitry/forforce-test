@@ -101,6 +101,8 @@ input:checked + .switch__slider:after {
     background-color: #F8F8F8;
     border: none;
     padding: 34px 0;
+    cursor: pointer;
+    transition: .4s;
     &__title {
         font-size: 18px;
         color: $grey-color;

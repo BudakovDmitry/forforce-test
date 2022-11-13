@@ -22,4 +22,12 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     carouselInner.style.transform = `translateX(-${activeIndex * 100}%)`;
   });
+
+  const cards = document.querySelectorAll('.card');
+  cards.forEach((card) => card.addEventListener('click', () => {
+    cards.forEach(
+      (item) => item.classList.contains('active') && item.classList.remove('active'),
+    );
+    card.classList.add('active');
+  }));
 });
