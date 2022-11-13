@@ -14,18 +14,33 @@
 }
 
 .carousel {
-  margin-top: 50px;
+  display: flex;
+  width: 100%;
   @include media-breakpoint-up(md) { 
     display: none;
   }
-  &__image {
-    height: 80px;
-    margin: 0 auto;
-    @include media-breakpoint-down(sm) {
-      height: 50px;
-    }
+  &__container {
+    overflow: hidden;
+    width: 100%;
   }
+
+  &__inner {
+    white-space: nowrap;
+    transform: translateX(-0%);
+    transition: transform 0.3s;
+  }
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+  }
+
   &__button {
-    color: $black-color;
+    cursor: pointer;
+    background: none;
+    border: none;
   }
 }
