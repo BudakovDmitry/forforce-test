@@ -1,0 +1,170 @@
+.prices {
+    &__container {
+    }
+
+    &__header {
+        align-items: center;
+        margin-bottom: 100px;
+    }
+
+    &__title {
+        font-size: 60px;
+        font-family: 'DM Sans', serif;
+        font-weight: bold;
+        line-height: 70px;
+    }
+}
+
+.switch {
+    margin: 20px;
+    position: relative;
+    display: inline-block;
+    width: 336px;
+    height: 63px;
+    &__input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+
+    }
+
+    &__slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(247, 247, 251, 1);
+        border-radius: 10px;
+        -webkit-transition: .4s;
+        transition: .4s;
+        &::before {
+            position: absolute;
+            content: "Yearly";
+            font-family: 'DM Sans', serif;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $white-color;
+            height: 55px;
+            width: 166px;
+            border-radius: 10px 0px 0px 10px;
+            left: 4px;
+            bottom: 4px;
+            background-color: $main-violet-color;
+            -webkit-transition: .4s;
+            transition: .4s;
+            z-index: 1;
+        }
+        &::after {
+            content: "Monthly";
+            font-family: 'DM Sans', serif;
+            font-weight: bold;
+            color: #000000;
+            position: absolute;
+            right: 60px;
+            top: 50%;
+            transform: translate(0, -50%);
+            z-index: 0;
+            transition: 0.2s;
+        }
+    }
+}
+  
+input:focus + .switch__slider{
+    box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .switch__slider:before {
+    -webkit-transform: translateX(162px);
+    -ms-transform: translateX(162px);
+    transform: translateX(162px);
+    border-radius: 0px 10px 10px 0px;
+    content: "Monthly";
+}
+
+input:checked + .switch__slider:after {
+    content: "Yearly";
+    left: 60px;
+}
+
+
+.cards {
+    margin-bottom: 100px;
+}
+
+.card {
+    height: 441px;
+    width: 330px;
+    background-color: #F8F8F8;
+    border: none;
+    padding: 34px 0;
+    &__title {
+        font-size: 18px;
+        color: $grey-color;
+        margin-bottom: 25px;
+    }
+
+    &__price {
+        font-size: 60px;
+        font-family: 'DM Sans', serif;
+        font-weight: bold;
+        margin-bottom: 25px;
+        span {
+            font-size: 28px;
+        }
+    }
+
+    &__list {
+        color: $grey-color;
+        font-family: 'Mulish', serif;
+        margin-bottom: auto;
+    }
+
+    &__button {
+        width: 285px;
+        height: 60px;
+        color: $main-violet-color;
+        background-color: $white-color;
+        border-radius: 10px;
+        display: block;
+        margin: 0 auto;
+        border: 1px solid #EAE9F2;
+        cursor: pointer;
+    }
+}
+
+.list {
+    &__item {
+        list-style: none;
+        margin-bottom: 20px;
+    }
+}
+
+.card.active {
+    height: 473px;
+    width: 376px;
+    background-color: #FF7143;
+    color: $white-color;
+    padding: 50px 0;
+    .card {
+        &__title {
+            color: $white-color;
+        }
+
+        &__list {
+            color: $white-color;
+        }
+
+        &__button {
+            background-color: #9F3919;
+            color: $white-color;
+            border: none;
+        }
+    }
+}
+
+
+
